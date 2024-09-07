@@ -1444,6 +1444,27 @@ a > figure {
     text-decoration: none;
     color: black;
 }
+section.datosAgenda a p {
+    position: relative;
+}
+section.datosAgenda a:hover p {
+    color: #fff;
+    transition: color .3s;
+}
+section.datosAgenda a > p:before {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: width .3s;
+}
+section.datosAgenda a:hover p::before {
+    background: #019790;
+	width:100%;
+	transition: width .3s;
+}
 
 @media screen  and (max-width: 1200px){
 	.agenda-header {
